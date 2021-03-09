@@ -1,0 +1,52 @@
+
+    
+
+
+
+    .left_items {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      .li1 {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      
+      }
+
+
+      .footer1{
+    background-color: cyan;
+    font-size: larger;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+           
+
+      }
+
+      main{
+     position: fixed;
+
+      }
+
+      .imgcss
+      {
+position: relative;
+height: 500px;
+width: 500px;
+margin-top: 150;
+margin-left: 200;
+margin-right: 200;
+margin-bottom: 200;
+      }
