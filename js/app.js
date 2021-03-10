@@ -1,6 +1,149 @@
 'use strict '
 
+let table = document.getElementById('mytable')
+let workingHours = ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm' ];
 
+
+function CookiesTable (branchlocation,minNumofcustomers,maxNumofcustomers,averagecookiespercustomer,totalcookiespairhours,totalCookiesPerDayattribute)
+{
+
+this.branchlocation=branchlocation;
+this.minNumofcustomers=minNumofcustomers;
+this.maxNumofcustomers=maxNumofcustomers;
+this.averagecookiespercustomer=averagecookiespercustomer;
+this.totalCookiesPerDayattribute=0;
+this.totalcookiespairhours=[];
+
+
+
+}
+
+CookiesTable.prototype.generatenumberofcustomers=function()
+{
+  let min = Math.floor(this.minNumofcustomers);
+  let max = Math.floor(this.maxNumofcustomers);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+CookiesTable.prototype.generatenumofcookies =function()
+{
+  let numCookies= this.averagecookiespercustomer * this.generatenumberofcustomers();
+  return   numCookies;
+}
+
+CookiesTable.prototype.firstRowintable = function()
+{ 
+  let tRow=document.createElement('tr');
+  let tHead=document.createElement('td');
+  tHead.innerText=this.branchlocation;
+  tRow.appendChild(tHead);
+
+  for(let i =0;i<workingHours.length;i++)
+
+{
+  let numCookies= Math.ceil( this.generatenumofcookies());
+  let tabledata=document.createElement('td');
+  tabledata.textContent=numCookies;
+  tRow.appendChild(tabledata);
+  this.totalCookiesPerDayattribute+=numCookies;
+
+}
+
+let total =  document.createElement('td');
+total.textContent = this.totalCookiesPerDayattribute;
+tRow.appendChild(total);
+table.append(tRow);
+}
+
+
+
+
+
+let Seattle=new CookiesTable('seattle' , 23,65,6.3);
+let tokyo=new CookiesTable('tokyo',3,24,1.2);    
+let dubai=new CookiesTable('Dubai' , 11,38,3.7 );
+let paris =new CookiesTable('Paris',20,38,2.3);
+let lima =new CookiesTable('Lima',23,65,6.3);
+let locationsList=[Seattle,tokyo,dubai,paris,lima];
+
+
+
+function theTableHeader (){
+  let tHead = document.createElement('thead');
+  let empty = document.createElement("th");
+  empty.textContent = ' ';
+tHead.appendChild(empty);
+  for(let i =0 ; i < workingHours.length ; i++){
+      let th = document.createElement('th');
+      th.textContent = workingHours[i];
+      tHead.appendChild(th);
+  }
+  let total = document.createElement('th');
+  total.textContent = 'Daily Location Total';
+  tHead.appendChild(total);
+
+  table.appendChild(tHead);
+ 
+}
+
+theTableHeader();
+
+Seattle.firstRowintable();
+tokyo.firstRowintable();
+dubai.firstRowintable();
+paris.firstRowintable();
+lima.firstRowintable();
+
+function makingFooter () {
+  let tableRow = document.createElement('tr');
+  let tableHeader = document.createElement('th');
+tableRow.appendChild(tableHeader);
+let totalofTotal = 0;
+for ( let i = 0 ; i < hours.length ; i++) {
+  let hourlyTotal = 0;
+  for ( let j = 0 ; j < location[j] ; j++) {
+      hourlyTotal+=hourlyTotal;
+
+  }
+    tableHeader = document.createElement('th');
+    tableHeader.textContent=hourlyTotal;
+    tableRow.appendChild(tableHeader);
+}
+tableHeader = document.createElement('th');
+tableHeader.textContent = totalofTotal;
+tableRow.appendChild(tableHeader);
+tableELement.appendChild(tableRow);
+
+}
+(function renderTable() {
+ 
+ for(let i = 0; i < location.length; i++){
+   locations[i].tmain();
+ }
+ makingFooter();
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 let myMain = document.getElementById('demo');
 
 let workingHours = ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm' ];
@@ -377,4 +520,4 @@ let Tokyo={
         }
         
         Lima.render();
-        console.log(Lima.totalcookiesinhour);
+        console.log(Lima.totalcookiesinhour);*/

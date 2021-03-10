@@ -50,3 +50,15 @@ margin-left: 200;
 margin-right: 200;
 margin-bottom: 200;
       }
+
+      table{
+
+        border:2px black solid;
+        
+        
+        } 
+        
+        td {
+            border: 2px black solid;
+        }
+        
