@@ -1,5 +1,27 @@
 'use strict '
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let table = document.getElementById('mytable')
 let workingHours = ['6am','7am','8am','9am','10am','11am','12am','1pm','2pm','3pm','4pm','5pm','6pm','7pm' ];
 
@@ -97,11 +119,11 @@ lima.firstRowintable();
 function makingFooter () {
   let tableRow = document.createElement('tr');
   let tableHeader = document.createElement('th');
-tableRow.appendChild(tableHeader);
-let totalofTotal = 0;
-for ( let i = 0 ; i < hours.length ; i++) {
-  let hourlyTotal = 0;
-  for ( let j = 0 ; j < location[j] ; j++) {
+      tableRow.appendChild(tableHeader);
+     let totalofTotal = 0;
+    for ( let i = 0 ; i < workingHours.length ; i++) {
+    let hourlyTotal = 0;
+    for ( let j = 0 ; j < location[j] ; j++) {
       hourlyTotal+=hourlyTotal;
 
   }
@@ -112,13 +134,13 @@ for ( let i = 0 ; i < hours.length ; i++) {
 tableHeader = document.createElement('th');
 tableHeader.textContent = totalofTotal;
 tableRow.appendChild(tableHeader);
-tableELement.appendChild(tableRow);
+tableHeader.appendChild(tableRow);
 
 }
 (function renderTable() {
  
  for(let i = 0; i < location.length; i++){
-   locations[i].tmain();
+   locations[i].theTableHeader();
  }
  makingFooter();
 })();
