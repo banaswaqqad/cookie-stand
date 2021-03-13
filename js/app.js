@@ -2,6 +2,31 @@
 
 
 
+/*
+let theForm=document.getElementById('myForm');
+
+theForm.addEventListener('submit',function numCookies(event)
+{
+event.preventDefault();
+let locationx=event.target.location.value;
+let minx = event.target.min.value;
+let maxx =event.target.max.value;
+let avgx = event.target.avg.value;
+let row = document.createElement('tr');
+this.appendChild(row);
+
+row.textContent=CookiesTable(locationx,minx,maxx,avgx);
+
+}
+
+
+);
+*/
+
+
+
+
+
 
 
 
@@ -134,7 +159,7 @@ function makingFooter () {
 tableHeader = document.createElement('th');
 tableHeader.textContent = totalofTotal;
 tableRow.appendChild(tableHeader);
-tableHeader.appendChild(tableRow);
+tableHeader.appendChild();
 
 }
 (function renderTable() {

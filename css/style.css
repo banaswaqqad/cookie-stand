@@ -3,58 +3,12 @@
 
 
 
-    .left_items {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-      }
-      
-      .li1 {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      
-      }
-
-
-      .footer1{
-    background-color: cyan;
-    font-size: larger;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-           
-
-      }
-
-      main{
-     position: fixed;
-
-      }
-
-      .imgcss
-      {
-position: relative;
-height: 500px;
-width: 500px;
-margin-top: 150;
-margin-left: 200;
-margin-right: 200;
-margin-bottom: 200;
-      }
 
       table{
 
         border:2px black solid;
-        
+       text-align: center;
+       margin-top: 15px;
         
         } 
         
@@ -62,3 +16,103 @@ margin-bottom: 200;
             border: 2px black solid;
         }
         
+        header{
+          
+          background-color: cadetblue;
+        }
+
+        header nav ul li {
+          display: inline-block;
+          text-align: center;
+           height: 30px; 
+           margin-right: 15px;
+           font-size: larger;
+           padding-left: 150px;
+           padding-top: 5px;
+           margin-top: 5px;
+          
+
+           
+        }
+        header nav{
+          border-style: groove;
+          
+          
+
+        }
+
+        header nav ul :first-child{
+         
+          max-width: 80px;;
+          max-height: 80px;
+        }
+
+
+        form{
+        padding-bottom: 40px;  
+        padding-top: 20px;
+
+        }
+
+        body{
+          background-color: rgb(148, 81, 95);
+        }
+         main :nth-child(2)
+         { 
+           margin-top: 15px;
+           border-style: groove;
+         }
+   
+
+       body main :nth-child(2) :nth-child(2) :first-child
+       {
+         max-height: 300px;
+         max-width: 300px;
+         text-align: center;
+         padding-bottom: 20px;
+       } 
+         
+       body main :nth-child(2) :nth-child(3) :first-child
+       {
+        max-height: 300px;
+         max-width: 300px;
+         text-align: center;
+         padding-bottom: 20px;
+       } 
+       
+       body main :nth-child(2):nth-child(4) :first-child
+       {
+         display: inline-block;
+        max-height: 300px;
+         max-width: 300px;
+         text-align: center;
+         padding-bottom: 20px;
+         margin-left: 60px;
+       } 
+      
+       body main :nth-child(2) :nth-child(5) :first-child
+       {
+         display: inline-block;
+        max-height: 300px;
+        max-width: 300px;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-left: 80px;
+        
+       } 
+
+      
+
+        footer{
+        font-size: larger;
+        text-align: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        background-color: gray;
+        height: 30px;
+          display: inline;
+
+        }
