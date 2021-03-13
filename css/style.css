@@ -1,64 +1,51 @@
 
+    header{
+    background-color: rgb(27, 25, 25);
+    height: 10vh;
+    }
+    header nav ul li {
+
+      display: inline-block;
+      color: white;
+      text-align: center;
+      height: 30px;
+      margin: 15px;
+      padding-top: 10px;
+      padding-left: 180px;
+    }
+    header nav {
+      margin-left: 150px;
+    }
+ 
+   body{
+     background-color: darkgrey;
+   }
+
+
+  main section  table th  {
+      border: 1px solid black; 
+      font-size: 30px;
+    }
+    main section  table tr  {
+      border: 1px solid black; 
+     font-size: 20px;
+    }
+    main section  table td  {
+      border: 1px solid black; 
+     font-size: 20px;
+     border-style: groove;
+     
+    }
+
+
+  main section table {
+    display: inline-block;
+      width: 100%;   
+      padding-left: 60px;   
+
+     
+    }
+
     
-
-
-
-    .left_items {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #333;
-      }
-      
-      .li1 {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      
-      }
-
-
-      .footer1{
-    background-color: cyan;
-    font-size: larger;
-    text-align: center;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-           
-
-      }
-
-      main{
-     position: fixed;
-
-      }
-
-      .imgcss
-      {
-position: relative;
-height: 500px;
-width: 500px;
-margin-top: 150;
-margin-left: 200;
-margin-right: 200;
-margin-bottom: 200;
-      }
-
-      table{
-
-        border:2px black solid;
-        
-        
-        } 
-        
-        td {
-            border: 2px black solid;
-        }
+  
         
